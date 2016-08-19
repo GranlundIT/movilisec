@@ -1,6 +1,6 @@
 import * as angular from 'angular';
 import * as angularMeteor from 'angular-meteor';
-import template from './unsignedLayout.html';
+import template from './unsignedlayout1.html';
 
 export class UnsignedLayoutComponent{
 

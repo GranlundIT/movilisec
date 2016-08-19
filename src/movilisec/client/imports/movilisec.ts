@@ -3,7 +3,8 @@ import * as angularMeteor from 'angular-meteor';
 import * as ngMaterial from 'angular-material';
 import * as uiRouter from 'angular-ui-router';
 import {routes} from './movilisec.routes.ts';
-import { name as unsignedLayout } from './layouts/unsignedLayout.ts';
+import { name as unsignedLayout } from './layouts/unsignedlayout1';
+import { name as adminLayout } from './layouts/adminlayout1';
 import { name as login } from './auth/login/login';
 import template from './movilisec.html';
 
@@ -16,6 +17,7 @@ export default angular.module(name, [
     ngMaterial,
     uiRouter,
     unsignedLayout,
+    adminLayout,
     login
 ])
   .component(name, {
@@ -31,7 +33,7 @@ export default angular.module(name, [
 export function config($locationProvider, $urlRouterProvider, $mdIconProvider){
   'ngInject';
   $mdIconProvider.defaultIconSet('fonts/mdi.svg');
-  $urlRouterProvider.otherwise('/parties');
+  $urlRouterProvider.otherwise('/404');
   $locationProvider.html5Mode(true);
 }
 
