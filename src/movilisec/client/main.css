@@ -1,1 +1,7 @@
 /* CSS declarations go here */
+
+.loginicon {
+  height: 128px;
+  width: 128px;
+  padding: 24px;
+}

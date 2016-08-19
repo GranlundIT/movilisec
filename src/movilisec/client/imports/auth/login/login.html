@@ -1,0 +1,45 @@
+<div layout-fill layout="column">
+  <div flex></div>
+  <div layout="row">
+    <div flex-gt-xs></div>
+    <div flex-gt-xs="33" flex-sm>
+      <div layout="row" layout-align="center">
+        <md-icon md-svg-icon="account-circle" class="loginicon"></md-icon>
+      </div>
+      <div layout="row" layout-align="center">
+        <md-button class="md-fab md-mini">
+          <md-icon md-svg-icon="facebook"></md-icon>
+        </md-button>
+        <md-button class="md-fab md-mini">
+          <md-icon md-svg-icon="google"></md-icon>
+        </md-button>
+        <md-button class="md-fab md-mini">
+          <md-icon md-svg-icon="twitter"></md-icon>
+        </md-button>
+      </div>
+      <md-toolbar ng-if="login.error" class="md-warn">
+        <div class="md-toolbar-tools">
+          <span>{{login.error}}</span>
+        </div>
+      </md-toolbar>
+      <form layout="column" ng-submit="login.login()">
+        <md-input-container>
+          <label>Username</label>
+          <input ng-model="login.username">
+        </md-input-container>
+        <md-input-container>
+          <label>Password</label>
+          <input ng-model="login.password">
+        </md-input-container>
+      </form>
+      <div layout="column">
+        <md-button class="md-raised md-primary" flex ng-click="login.login()">Login</md-button>
+      </div>
+      <div layout="row" layout-align="center">
+        <span>Don't have an account? <a href="#">Signup</a></span>
+      </div>
+    </div>
+    <div flex-gt-xs></div>
+  </div>
+  <div flex></div>
+</div>
